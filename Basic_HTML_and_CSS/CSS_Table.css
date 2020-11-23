@@ -1,0 +1,13 @@
+td:hover {
+    background-color: cornflowerblue;
+}
+tr, td {
+    font-family: 'Times New Roman', Times, serif;
+    border-bottom: 2px solid rgb(145, 145, 145);
+    color: black;
+}
+tr, th {
+    color: rgb(41, 41, 226);
+    font-family: 'Nerko One', cursive;
+    border-bottom: 2px solid rgb(145, 145, 145);
+}
