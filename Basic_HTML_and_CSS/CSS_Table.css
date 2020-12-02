@@ -1,13 +1,21 @@
 td:hover {
     background-color: cornflowerblue;
 }
-tr, td {
+/* table {
     font-family: 'Times New Roman', Times, serif;
-    border-bottom: 2px solid rgb(145, 145, 145);
+    border-right: 2px solid rgb(145, 145, 145);
     color: black;
+    border-collapse: collapse; }*/
+table {
+    border-collapse: collapse;
+}
+th, td {
+    border-right: 2px solid rgb(145, 145, 145);
+
+
 }
 tr, th {
     color: rgb(41, 41, 226);
     font-family: 'Nerko One', cursive;
-    border-bottom: 2px solid rgb(145, 145, 145);
+    /* border-bottom: 2px solid rgb(145, 145, 145); */
 }
