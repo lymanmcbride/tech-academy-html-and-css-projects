@@ -21,7 +21,7 @@ nav {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "open Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 
 h1 {
@@ -30,8 +30,8 @@ h1 {
     font-size: 30px;
     text-transform: uppercase;
     text-align: center;
-    color: #e91c1c;
-    text-shadow: 2px 2px 3px rgba(0,0,0,.5);
+    color: #b7410e;
+    text-shadow: 1.5px 1.5px 3px rgba(0,0,0,.5);
 }
 
 h1::after { /*This is the underline */
@@ -41,7 +41,7 @@ h1::after { /*This is the underline */
     width: 150px;
     background: #e91c1c;
     margin: 5px auto 40px;
-    box-shadow: 5px 2px 3px rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.5);
 }
 
 h2{
@@ -50,8 +50,10 @@ h2{
 }
 
 h3 {
-    line-height: 30px;
-    padding-bottom: 20px;
+    line-height: 20px;
+    padding-bottom: 10px;
+    padding-top: 25px;
+    font-size: 17px;
 }
 
 h4 {
@@ -143,11 +145,11 @@ section {
 HOME SECTION STYLES
 =========================================================== */
 #home {
-    background: url(../images/Home_background.jpg) no-repeat 50% 50%;
+    background: url(../images/homepage_hero.jpeg) no-repeat 50% 50%;
     background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
-    -0-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     width: 100%;
     display: block;
@@ -200,6 +202,13 @@ Contact STYLES
     margin: 0px auto;
     background-color: rgba (100, 65, 0, .3);
     box-shadow: 2px 2px 10px 0 rgba(0,0,0,0.5);
+    width: 700px;
+}
+
+@media screen and (max-width: 1000px) {
+    .flex-container {
+        width: auto;
+    }
 }
 
 #contact {
@@ -211,8 +220,8 @@ Contact STYLES
     padding: 10px;
     border-radius: 8px;
     margin: 0px auto;  
-    background-color: rgba(100,65,0,.3);
-    box-shadow; -1px -1px 1px 0 rgba (0,0,0,0.1), 1px 2px 10px 0 rgba(0,0,0,0.5);
+    background-color: rgba(180, 152, 100, 0.3);
+    box-shadow: -1px -1px 1px 0 rgba (0,0,0,0.1), 1px 2px 10px 0 rgba(0,0,0,0.5);
 }
 
 .reservation h2 {
@@ -242,6 +251,7 @@ Contact STYLES
     color: #13161b;
     width: 50%;
     margin: 0 auto;
+    text-align: center;
 }
 
 .reservation form {
@@ -263,22 +273,22 @@ Contact STYLES
     font-size: 15px;
     outline: none;
     font-weight: 600;
-    color: #8d8e8f;
+    color: #797a7a;
     padding: 2% 1% 2% 7%;
     width: 80%;
-    border-top: 1px solid #090b0d;
-    border-right: 2px solid #424549;
-    border-bottom: 2px solid #424549;
-    border-left: 1px solid #090b0d;
+    border-top: 1px solid #7c7c7c;
+    border-right: 2px solid #7c7c7c;
+    border-bottom: 2px solid #7c7c7c;
+    border-left: 1px solid #7c7c7c;
     margin: 10px 1em;
     border-radius: 7px;
-    background: #13161b;
+    background: #dddddd;
     box-shadow: inset 0px 3px 0px 0px rgba(5,5,5,.15);
     font-family: 'Raleway', sans-serif;
 }
 
 .reservation input[type="text"]:hover {
-    box-shadow: 0 0 18px rgba(100,65,0,.8);
+    box-shadow: 0 0 18px rgba(114, 114, 114, 0.774);
 }
 
 .form-spacer {
