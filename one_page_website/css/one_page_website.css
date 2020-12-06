@@ -23,7 +23,7 @@ form input[type="email"] {
     border-radius: 20px;
 }
 
-form input[type="text" class="message"] {
-    height: 200px;
+textarea {
+    height: 150px;
     width: 400px;
 }
