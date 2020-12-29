@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <title>Utah National Parks</title>
         <link rel="stylesheet" href="./css/one_page_website.css">
+        <script src="js/one_page_website.js" defer></script>
     </head>
     <body>
         <!--NAV-->
@@ -32,20 +33,20 @@
         <section>
             <div id="gallery">
                 <h1>Gallery</h1>
-                <div>
+                <div class="row">
                     <!--PHOTO CONTAINER 1-->
-                    <div>
+                    <div class="column">
                         <div>
-                            <img src="images/thumb/thumbnail_1.jpg" alt="Aerial photo of Zion National Park">
+                            <img src="images/thumb/thumbnail_1.jpg" onclick="openmodal();currentslide(1)" class="hover-shadow cursor" alt="Aerial photo of Zion National Park">
                             <h3>Zion National Park</h3>
                         </div>
                     </div>
                     <!--End Photo Container 1-->
 
                     <!--Photo Container 2-->
-                    <div>
+                    <div class="column">
                         <div>
-                            <img src="images/thumb/thumbnail_2.jpg" alt="Delicate Arch in Arches National Park">
+                            <img src="images/thumb/thumbnail_2.jpg" onclick="openmodal();currentslide(2)" class="hover-shadow cursor" alt="Delicate Arch in Arches National Park">
                             <div>
                                 <h3>Arches National Park</h3>
                             </div>
@@ -54,9 +55,9 @@
                     <!--End Photo Container 2-->
 
                     <!--Photo Container 3-->
-                    <div>
+                    <div class="column">
                         <div>
-                            <img src="images/thumb/thumbnail_3.jpg" alt="Aerial photo of Bryce Canyon">
+                            <img src="images/thumb/thumbnail_3.jpg" onclick="openmodal();currentslide(3)" class="hover-shadow cursor" alt="Aerial photo of Bryce Canyon">
                             <div>
                                 <h3>Bryce Canyon</h3>
                             </div>
@@ -65,9 +66,9 @@
                     <!--End Photo Container 3-->
 
                     <!--Photo Container 4-->
-                    <div>
+                    <div class="column">
                         <div>
-                            <img src="images/thumb/thumbnail_4.jpg" alt="Canyonlands national park at sunset">
+                            <img src="images/thumb/thumbnail_4.jpg" onclick="openmodal();currentslide(4)" class="hover-shadow cursor" alt="Canyonlands national park at sunset">
                             <div>
                                 <h3>Canyonlands National Park</h3>
                             </div>
@@ -76,9 +77,9 @@
                     <!--End Photo Container 4-->
 
                     <!--Photo Container 5-->
-                    <div>
+                    <div class="column">
                         <div>
-                            <img src="images/thumb/thumbnail_5.jpg" alt="aerial photo of Capitol Reef">
+                            <img src="images/thumb/thumbnail_5.jpg" onclick="openmodal();currentslide(5)" class="hover-shadow cursor" alt="aerial photo of Capitol Reef">
                             <div>
                                 <h3>Capitol Reef National Park</h3>
                             </div>
@@ -90,6 +91,57 @@
             <iframe width="1280" height="720" src="https://www.youtube.com/embed/HEZ3WyAUPZM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </section>
         <!--END GALLERY-->
+
+        <!--The Lightbox-->
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+                <div class="mySlides">
+                    <div class="numbertext">1 / 4</div>
+                    <img src="images/thumb/thumbnail_1.jpg" style="width:100%" alt="">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="images/thumb/thumbnail_2.jpg" style="width:100%" alt="">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="images/thumb/thumbnail_3.jpg" style="width:100%" alt="">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">4 / 4</div>
+                    <img src="images/thumb/thumbnail_4.jpg" style="width:100%" alt="">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext">5 / 4</div>
+                    <img src="images/thumb/thumbnail_5.jpg" style="width:100%" alt="">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+
+                <div class="column">
+                    <img class="demo cursor" src="images/thumb/thumbnail_1.jpg" style="width:100%" onclick="currentslide(1)" alt="">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="images/thumb/thumbnail_2.jpg" style="width:100%" onclick="currentslide(2)" alt="">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="images/thumb/thumbnail_3.jpg" style="width:100%" onclick="currentslide(3)" alt="">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="images/thumb/thumbnail_4.jpg" style="width:100%" onclick="currentslide(4)" alt="">
+                </div>
+                <div class="column">
+                    <img class="demo cursor" src="images/thumb/thumbnail_5.jpg" style="width:100%" onclick="currentslide(5)" alt="">
+                </div>
+            </div>
+        </div>
 
         <!--CONTACT-->
         <section>
