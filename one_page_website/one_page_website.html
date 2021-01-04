@@ -5,6 +5,7 @@
         <title>Utah National Parks</title>
         <link rel="stylesheet" href="./css/one_page_website.css">
         <script src="js/one_page_website.js" defer></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <body>
         <!--NAV-->
@@ -20,7 +21,7 @@
         <div id="home">
             <div>
                 <div>
-                    <h1>Home</h1>
+                    <h1 style="font-size: 8vw;">Home</h1>
                     <img src="images/home_hero.jpg" alt="Arches National Park" style="z-index: -1; position: absolute;margin-left: 300px;">
                     <h1 style="text-align: center; padding-top: 195px;">Utah National Parks</h1>
                     <h4 style="text-align: center; margin-bottom: 220px;">Your Adventure is here!</h4>
@@ -33,11 +34,11 @@
         <section>
             <div id="gallery">
                 <h1>Gallery</h1>
-                <div class="row">
+                <div class="row" id="slideshow">
                     <!--PHOTO CONTAINER 1-->
                     <div class="column">
                         <div>
-                            <img src="images/thumb/thumbnail_1.jpg" onclick="openmodal();currentslide(1)" class="hover-shadow cursor" alt="Aerial photo of Zion National Park">
+                            <img id="keyframe_practice" src="images/thumb/thumbnail_1.jpg" onclick="openmodal();currentslide(1)" class="hover-shadow cursor" alt="Aerial photo of Zion National Park">
                             <h3>Zion National Park</h3>
                         </div>
                     </div>
@@ -180,5 +181,18 @@
         </footer>
         <!--End Footer-->
 
+        <script>
+        $("#slideshow > div:gt(0)").hide();
+        setInterval(function() {
+            $('#slideshow > div:first')
+            .fadeOut(1000)
+            .next()
+            .fadeIn(1000)
+            .end()
+            .appendTo('#slideshow');
+        }, 3000);
+        </script>
+
+        
     </body>
 </html>

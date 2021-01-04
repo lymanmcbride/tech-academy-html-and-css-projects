@@ -167,7 +167,7 @@
               </fieldset>
               <fieldset class="form-group">
                 <label for="lastname">Last Name:</label>
-                <input type="text" class="form-control" id="lastnmae">
+                <input type="text" class="form-control" id="lastname">
               </fieldset>
               <fieldset class="form-group">
                 <label for="email">Email:</label>
@@ -177,7 +177,12 @@
                 <label for="confirm-email">Confirm Email:</label>
                 <input type="text" class="form-control" id="confirm-email">
               </fieldset>
+              <fieldset class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="text" class="form-control" id="phone">
+              </fieldset>
               <div class="alert alert-warning d-none" id="email-alert" role="alert">Emails must match</div>  <!--The alert warning is my new bootstrap component. It displays if the emails do not match-->
+              <div id="validate_form" class="alert alert-warning d-none" role="alert"></div>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-primary" id="modal-save">Save changes</button>
@@ -221,7 +226,30 @@
         if (email != confemail) {
           $('#email-alert').removeClass("d-none");
         }
+        var fname = $('#firstname').val();
+        var lname = $('#lastname').val();
+        var phone = $('#phone').val();
+        validate(fname, "firstname");
+        validate(lname, "lastname");
+        validate(phone, "phone");
+        validate(email, "email");
+        validate(confemail, "confirm-email");
       });
+
+      var labels = document.getElementsByTagName('LABEL');
+      for (var i = 0; i < labels.length; i++) {
+          if (labels[i].htmlFor != '') {
+              var elem = document.getElementById(labels[i].htmlFor);
+              if (elem)
+                  elem.label = labels[i];         
+          }
+      }
+      function validate(value, ident) {
+        if (value == "") {
+          document.getElementById("validate_form").innerHTML += document.getElementById(ident).label.innerHTML + " must be filled out. <br>"
+          $('#validate_form').removeClass("d-none");
+        }
+      }
     </script>
   </body>
 </html>
